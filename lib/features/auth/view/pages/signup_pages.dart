@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:misus/features/auth/view/widgets/auth_gradiant_button.dart';
 import 'package:misus/features/auth/view/widgets/custom_field.dart';
 
 class SignupPage extends StatefulWidget {
@@ -38,7 +39,10 @@ class _SignupPageState extends State<SignupPage> {
               CustomField(hintText: 'Email'),
               const SizedBox(height: 15),
               CustomField(hintText: 'Password'),
+              const SizedBox(height: 20),
+              AuthGradiantButton(),
             ],
+            
           ),
         ),
       ),
