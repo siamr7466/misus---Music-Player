@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:misus/core/app_pallete.dart';
 import 'package:misus/features/auth/view/widgets/auth_gradiant_button.dart';
 import 'package:misus/features/auth/view/widgets/custom_field.dart';
 
@@ -41,8 +42,23 @@ class _SignupPageState extends State<SignupPage> {
               CustomField(hintText: 'Password'),
               const SizedBox(height: 20),
               AuthGradiantButton(),
+              const SizedBox(height: 20),
+              RichText(
+                text: TextSpan(
+                  text: 'Already have an account? ',
+                  style: Theme.of(context).textTheme.titleMedium,
+                  children: [
+                    TextSpan(
+                      text: 'Sign in',
+                      style: TextStyle(
+                        color: Pallete.gradient2,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
             ],
-            
           ),
         ),
       ),
