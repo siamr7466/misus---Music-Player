@@ -3,22 +3,20 @@ import 'package:misus/core/app_pallete.dart';
 import 'package:misus/features/auth/view/widgets/auth_gradiant_button.dart';
 import 'package:misus/features/auth/view/widgets/custom_field.dart';
 
-class SignupPage extends StatefulWidget {
-  const SignupPage({super.key});
+class LoginPage extends StatefulWidget {
+  const LoginPage({super.key});
 
   @override
-  State<SignupPage> createState() => _SignupPageState();
+  State<LoginPage> createState() => _LoginPageState();
 }
 
-class _SignupPageState extends State<SignupPage> {
-  final nameController = TextEditingController();
+class _LoginPageState extends State<LoginPage> {
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
   final formKey = GlobalKey<FormState>();
 
   @override
   void dispose() {
-    nameController.dispose();
     emailController.dispose();
     passwordController.dispose();
     super.dispose();
@@ -47,11 +45,9 @@ class _SignupPageState extends State<SignupPage> {
                 //   style: TextStyle(fontSize: 50, fontWeight: FontWeight.bold),
                 // ),
                 Text(
-                  "Sign Up.",
+                  "Sign In.",
                   style: TextStyle(fontSize: 50, fontWeight: FontWeight.bold),
                 ),
-                const SizedBox(height: 30),
-                CustomField(hintText: 'Name', controller: nameController),
                 const SizedBox(height: 15),
                 CustomField(hintText: 'Email', controller: emailController),
                 const SizedBox(height: 15),
@@ -61,15 +57,15 @@ class _SignupPageState extends State<SignupPage> {
                   isObscureText: true,
                 ),
                 const SizedBox(height: 20),
-                AuthGradiantButton(buttonText: 'Sign up', onTap: () {}),
+                AuthGradiantButton(buttonText: 'Sign in', onTap: () {}),
                 const SizedBox(height: 20),
                 RichText(
                   text: TextSpan(
-                    text: 'Already have an account? ',
+                    text: 'Don\'t have an account? ',
                     style: Theme.of(context).textTheme.titleMedium,
-                    children: [
+                    children: const [
                       TextSpan(
-                        text: 'Sign in',
+                        text: 'Sign Up',
                         style: TextStyle(
                           color: Pallete.gradient2,
                           fontWeight: FontWeight.bold,
