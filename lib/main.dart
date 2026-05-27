@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:misus/core/theme/theme.dart';
 import 'package:misus/features/auth/view/pages/login_page.dart';
-import 'package:misus/features/auth/view/pages/signup_pages.dart';
+// import 'package:misus/features/auth/view/pages/signup_pages.dart';
 
 void main() {
   runApp(const MainApp());
